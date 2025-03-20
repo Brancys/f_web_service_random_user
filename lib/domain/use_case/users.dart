@@ -5,7 +5,7 @@ import '../repositories/iuserrepository.dart';
 class Users {
   IUserRepository repository = Get.find();
 
-  Future<void> addUser() async => await Future.value();
+  Future<void> addUser() async => await repository.getUser();
   Future<List<RandomUser>> getAllUsers() async => await repository.getAllUsers();
   Future<void> deleteUser(id) async => await repository.deleteUser(id);
   Future<void> deleteAll() async => await repository.deleteAll();
